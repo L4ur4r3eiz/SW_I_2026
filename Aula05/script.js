@@ -19,18 +19,24 @@ function somar() {
 }
 
 //Calcular IMC
+function calcularIMC() {
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altura = parseFloat(document.getElementById("altura").value);
 
-function IMC() {
+    const imc = peso / (altura * altura);
+    let classificacaoimc = "";
 
-    var peso = parseFloat(document.getElementById("peso").value);
-    var altura = parseFloat(document.getElementById("altura").value);
+    if (imc < 18.5) {
+        classificacaoimc = "Magreza";
+    } else if (imc >= 18.5 && imc < 25) {
+        classificacaoimc = "Peso Normal";
+    } else if (imc >= 25 && imc < 30) {
+        classificacaoimc = "Sobrepeso";
+    } else {
+        classificacaoimc = "Obesidade";
+    }
 
-    var valoraltura = altura * altura;
-    IMC = valoraltura / peso
-
-    
-
-    document.getElementById("resultado").innerText = "Resultado: "
-        = IMC;
-
+   
+    document.getElementById("resultado").innerText = 
+        "Resultado: " + imc.toFixed(2) + " (" + classificacaoimc + ")";
 }
