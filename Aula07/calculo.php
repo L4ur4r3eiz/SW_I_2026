@@ -37,7 +37,6 @@ $salario_final = $salario - $total_descontos;
     <p><?php echo $nome; ?>, o total do seu salario é:</p>
 
     <h3>R$ <?php echo number_format($salario_final, 2, ',', '.'); ?></h3>
-
     <a href="index.html">
         <button>Voltar</button>
     </a>
