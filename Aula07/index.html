@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Salário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Cálculo de Salário</h2>
+
+    <form action="calculo.php" method="post">
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>Salário:</label>
+        <input type="number" name="salario" step="0.01" required>
+
+        <label>Faltas:</label>
+        <input type="number" name="faltas" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+</body>
+</html>
