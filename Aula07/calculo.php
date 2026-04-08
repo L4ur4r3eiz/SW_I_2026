@@ -4,7 +4,7 @@ $nome = $_POST["nome"];
 $salario = $_POST["salario"];
 $faltas = $_POST["faltas"];
 
-// ---------------- INSS ----------------
+
 if ($salario <= 1621) {
     $inss = $salario * 0.075;
 } elseif ($salario <= 2902.84) {
@@ -17,13 +17,13 @@ if ($salario <= 1621) {
     $inss = 8475.55 * 0.14;
 }
 
-// ---------------- FALTAS ----------------
+
 $desconto_faltas = $faltas * ($salario / 30);
 
-// ---------------- VALE TRANSPORTE ----------------
+
 $vt = $salario * 0.06;
 
-// ---------------- TOTAL ----------------
+
 $total_descontos = $inss + $desconto_faltas + $vt;
 $salario_final = $salario - $total_descontos;
 
