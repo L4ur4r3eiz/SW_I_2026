@@ -1,9 +1,7 @@
 <?php
-
 $nome = $_POST["nome"];
 $salario = $_POST["salario"];
 $faltas = $_POST["faltas"];
-
 
 if ($salario <= 1621) {
     $inss = $salario * 0.075;
@@ -17,16 +15,11 @@ if ($salario <= 1621) {
     $inss = 8475.55 * 0.14;
 }
 
-
 $desconto_faltas = $faltas * ($salario / 30);
-
-
 $vt = $salario * 0.06;
-
 
 $total_descontos = $inss + $desconto_faltas + $vt;
 $salario_final = $salario - $total_descontos;
-
 ?>
 
 <!DOCTYPE html>
