@@ -1,4 +1,5 @@
 <?php
+
 $nome = $_POST["nome"];
 $salario = $_POST["salario"];
 $faltas = $_POST["faltas"];
@@ -16,10 +17,13 @@ if ($salario <= 1621) {
 }
 
 $desconto_faltas = $faltas * ($salario / 30);
+
 $vt = $salario * 0.06;
+
 
 $total_descontos = $inss + $desconto_faltas + $vt;
 $salario_final = $salario - $total_descontos;
+
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +38,10 @@ $salario_final = $salario - $total_descontos;
 <div class="container">
     <h2>Resultado</h2>
 
-    <p><?php echo $nome; ?>, o total do seu salario é:</p>
+    <p><?php echo $nome; ?>, o total do seu salário após os descontos é:</p>
 
     <h3>R$ <?php echo number_format($salario_final, 2, ',', '.'); ?></h3>
+
     <a href="index.html">
         <button>Voltar</button>
     </a>
