@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header.alonso {
+    background-color: #1e293b;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header.alonso .logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+header.alonso a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header.alonso a:hover {
+    color: #38bdf8;
+}
+
+body > h1,
+body > p,
+body > ul {
+    margin: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
