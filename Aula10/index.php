@@ -2,10 +2,10 @@
 
 $menu = [
     "Home" => "home",
-    "Sobre" => "sobre",
-    "Projetos" => "projetos",
-    "Experiencias" => "experiencias",
-    "Contato" => "contato"
+    "Jogo 01" => "Jogo 01",
+    "Jogo 02" => "Jogo 02",
+    "Curiosidades" => "Curiosidades",
+    "Extra" => "Extra"
 ];
 
 $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 'home';
@@ -71,10 +71,13 @@ switch($pagina){
              ambiente hostil. 
             </h4>
 
+				 <img src='img/tlous_home.jpg' class='img-baixo'>            
+
+
         ";
     break;
 
-    case 'sobre':
+    case 'Jogo 01':
         echo "
             <h2>The Last of Us - Parte I</h2>
             <h4>Premissa Narrativa e Linha do Tempo: Lançado originalmente em junho de 2013 para PlayStation 3 
@@ -102,10 +105,15 @@ switch($pagina){
             Estaladores (Clickers): Infectados há anos. O fungo estourou seus crânios, deixando-os totalmente cegos. Eles usam a 
             ecolocalização através de estalos vocais para caçar e matam o jogador instantaneamente caso o alcancem. [1, 2, 3, 4, 5, 6]
             </h4>
+
+
+									            <img src='img/img01.avif' class='img-baixo'>            
+
+
         ";
     break;
 
-    case 'projetos':
+    case 'Jogo 02':
         echo "
             <h2>The Last of Us - Parte II </h2>
             <h4>Contexto e Linha do Tempo: Lançado em junho de 2020 para PS4 (recebendo a versão Remastered para PS5 em 2024), o 
@@ -132,10 +140,14 @@ switch($pagina){
             criaturas robustas que exalam nuvens de ácido corrosivo, e o Rei dos Ratos (Rat King), uma massa colossal e mutante formada
             pela fusão de vários infectados que estavam presos juntos em uma ala hospitalar desde o início do surto. [1, 2, 3, 4, 5]
             </h4>
+
+						            <img src='img/tlous02.jpg' class='img-baixo'>            
+
+
         ";
     break;
 
-    case 'experiencias':
+    case 'Curiosidades':
         echo "
             <h2>Curiosidades Tecnológicas e Segredos Escondidos</h2>
             <h4>A Engenharia de Som dos Estaladores: Os sons e estalos guturais dos Clickers são analógicos.
@@ -160,10 +172,15 @@ switch($pagina){
             é possível encontrar tabuleiros de jogos de tabuleiro reais baseados em Uncharted, jornais antigos noticiando os achados 
             arqueológicos de Nathan Drake e consoles PlayStation 3 abandonados com cópias físicas de games antigos da Naughty Dog. [1]
             </h4>
+
+			            <img src='img/bastidoresjogo.jpeg' class='img-baixo'>            
+
+
+
         ";
     break;
 
-    case 'contato':
+    case 'Extra':
         echo "
             <h2>Além dos Jogos</h2>
             <h4>O Sucesso Histórico na TV (HBO e Max): Estreando em janeiro de 2023, a adaptação oficial em formato de série
@@ -193,7 +210,7 @@ switch($pagina){
             durante o período de exibição da segunda temporada da série na TV. [1, 2, 3, 4, 5, 6, 7]
             </h4>
 
-            <img src='img/imagem.jpg' class='img-baixo'>            
+            <img src='img/tlous_serie.jpg' class='img-baixo'>            
         ";
     break;
 
