@@ -1,21 +1,86 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Validar CPF</title>
+    <title>Validador CPF</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <h1>Validador de CPF</h1>
-        <h3>Escreva o seu CPF abaixo:</h3>
-        <form action="validar.php" method="POST">
-            <input type="text" name="cpf_usuario" placeholder="000.000.000-00" required>
-            <br><br>
-            <button type="submit">Validar</button>
-        </form>
-    </div>
+
+
+<form method="POST">
+    <label>Nome:</label><br>
+    <input type="text" name="nome"><br><br>
+
+    <label>CPF:</label><br>
+    <input type="text" name="cpf"><br><br>
+
+    <button type="submit">Validar</button>
+
+    <?php
+
+if(isset($_POST['cpf'])){
+
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+
+    $cpf = preg_replace('/[^0-9]/', '', $cpf);
+
+    $digitos = str_split($cpf);
+
+
+    $soma1 =
+        ($digitos[0] * 10) +
+        ($digitos[1] * 9) +
+        ($digitos[2] * 8) +
+        ($digitos[3] * 7) +
+        ($digitos[4] * 6) +
+        ($digitos[5] * 5) +
+        ($digitos[6] * 4) +
+        ($digitos[7] * 3) +
+        ($digitos[8] * 2);
+
+    $resto1 = $soma1 % 11;
+
+    if($resto1 < 2){
+        $validador1 = 0;
+    }else{
+        $validador1 = 11 - $resto1;
+    }
+    $soma2 =
+        ($digitos[0] * 11) +
+        ($digitos[1] * 10) +
+        ($digitos[2] * 9) +
+        ($digitos[3] * 8) +
+        ($digitos[4] * 7) +
+        ($digitos[5] * 6) +
+        ($digitos[6] * 5) +
+        ($digitos[7] * 4) +
+        ($digitos[8] * 3) +
+        ($digitos[9] * 2);
+
+    $resto2 = $soma2 % 11;
+
+    if($resto2 < 2){
+        $validador2 = 0;
+    }else{
+        $validador2 = 11 - $resto2;
+    }
+
+    if($validador1 == $digitos[9] && $validador2 == $digitos[10]){
+        echo "<h2>$nome, CPF válido!</h2>";
+    }else{
+        echo "<h2>$nome, CPF inválido!</h2>";
+    }
+}
+
+?>
+
+</form>
+
+
+
+
+
 </body>
 </html>
